@@ -2,7 +2,7 @@
 #include <iostream>
 
 int getLevelIndex(std::string level) {
-	std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	const std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	
 	for (int i = 0; i < 4; i++) {
 		if (levels[i] == level)
@@ -25,17 +25,14 @@ int main(int argc, char **argv) {
 			std::cout << "[ DEBUG ]" << std::endl;
 			harl.complain("DEBUG");
 			std::cout << std::endl;
-			// fall through
 		case 1:
 			std::cout << "[ INFO ]" << std::endl;
 			harl.complain("INFO");
 			std::cout << std::endl;
-			// fall through
 		case 2:
 			std::cout << "[ WARNING ]" << std::endl;
 			harl.complain("WARNING");
 			std::cout << std::endl;
-			// fall through
 		case 3:
 			std::cout << "[ ERROR ]" << std::endl;
 			harl.complain("ERROR");
