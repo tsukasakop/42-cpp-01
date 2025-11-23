@@ -24,7 +24,6 @@ void Harl::error(void) {
 }
 
 void Harl::complain(std::string level) {
-	// メンバ関数へのポインタの配列
 	void (Harl::*functions[])(void) = {
 		&Harl::debug,
 		&Harl::info,
